@@ -1,0 +1,211 @@
+/* Fonts */
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/play-v21-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/play-v21-latin-700.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v50-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/roboto-v50-latin-600.woff2') format('woff2');
+}
+
+:root {
+  --color-brand-dark: #011c44;
+  --color-secondary-light-gray: #747272;
+  --color-secondary-dark-gray: #4a4a4a;
+  --color-brand-light: #2b7fff;
+  --color-primary-light: #ffffff;
+}
+
+/* Base  */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  color: var(--color-brand-dark);
+  font-family: 'Roboto';
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+address {
+  font-style: normal;
+}
+/* Button */
+.button {
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 32px;
+  padding: 16px 32px;
+  border: 2px solid var(--color-brand-light);
+  color: var(--color-primary-light);
+  background: var(--color-brand-light);
+  cursor: pointer;
+}
+.button:hover {
+  color: var(--color-brand-dark);
+  background-color: transparent;
+}
+
+/* Link */
+.link-header {
+  color: var(--color-brand-dark);
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  /* line-height: 1.2; */
+}
+.link-header:hover {
+  color: var(--color-brand-light);
+  font-weight: 700;
+}
+
+.link-footer {
+  color: var(--color-brand-dark);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.2;
+  color: var(--color-primary-light);
+}
+.link-footer:hover {
+  color: var(--color-brand-light);
+  font-weight: 600;
+}
+.address-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--color-primary-light);
+}
+
+/* Header */
+header {
+  background-color: var(--color-primary-light);
+}
+
+/* Hero-section */
+
+.hero-section {
+  padding: 125px 0px;
+}
+.hero-title {
+  color: var(--color-brand-light);
+  font-family: 'Play';
+  font-size: 140px;
+  font-weight: 700;
+}
+.name-logo {
+  font-weight: 400;
+  font-size: 18px;
+}
+.call-stay {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* About-section */
+.about-title span {
+  color: var(--color-brand-light);
+}
+.about-title {
+  font-family: 'Play';
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.about-text {
+  margin-bottom: 48px;
+  font-size: 22px;
+}
+.about-text .accent {
+  font-weight: 600;
+}
+
+/* Advantages-section */
+.advantages-title {
+  color: var(--color-brand-dark);
+  font-family: 'Play';
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+.advantages-list {
+  font-size: 18px;
+}
+.advantages-title .accent {
+  color: var(--color-brand-light);
+}
+
+/* Procedures-section */
+.procedures-title {
+  font-family: 'Play';
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+/* Contacts-section */
+.contacts-title {
+  font-family: 'Play';
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+.contacts-title .accent {
+  color: var(--color-brand-light);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-brand-dark);
+}
+
+.address-copyright {
+  font-size: 13px;
+  color: var(--color-secondary-light-gray);
+}
