@@ -96,7 +96,7 @@ address {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
-  /* line-height: 1.2; */
+  line-height: 1.2;
 }
 .link-header:hover {
   color: var(--color-brand-light);
@@ -104,12 +104,11 @@ address {
 }
 
 .link-footer {
-  color: var(--color-brand-dark);
+  color: var(--color-primary-light);
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
-  line-height: 1.2;
-  color: var(--color-primary-light);
+  white-space: nowrap;
 }
 .link-footer:hover {
   color: var(--color-brand-light);
@@ -119,35 +118,94 @@ address {
   font-size: 16px;
   text-decoration: none;
   color: var(--color-primary-light);
+  white-space: nowrap;
 }
 
 /* Header */
 header {
-  background-color: var(--color-primary-light);
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 240px;
+  margin: 42px 0;
+}
+
+.header-menu {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  gap: 56px;
 }
 
 /* Hero-section */
-
 .hero-section {
-  padding: 125px 0px;
+  padding: 125px 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9) 30%,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    url('../images/hero-section-baground.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.name-logo {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
 .hero-title {
   color: var(--color-brand-light);
   font-family: 'Play';
   font-size: 140px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 40px;
+  max-width: 530px;
+  line-height: 0.82;
 }
-.name-logo {
-  font-weight: 400;
-  font-size: 18px;
-}
+
 .call-stay {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
+  margin: 0;
+  margin-top: 14px;
+  max-width: 240px;
+  text-align: center;
 }
 
 /* About-section */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .about-title span {
   color: var(--color-brand-light);
 }
@@ -155,30 +213,86 @@ header {
   font-family: 'Play';
   font-size: 64px;
   font-weight: 700;
-  margin-bottom: 48px;
+  line-height: 1.16;
+}
+.about-text {
+  font-size: 22px;
+  line-height: 1.72;
+  margin-bottom: 0;
 }
 
-.about-text {
-  margin-bottom: 48px;
-  font-size: 22px;
-}
 .about-text .accent {
   font-weight: 600;
+}
+
+.about-photos {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+.about-photos img {
+  border-radius: 50%;
+}
+
+.about-photos img:first-child {
+  align-self: flex-start;
+}
+
+.about-photos img:last-child {
+  align-self: flex-end;
 }
 
 /* Advantages-section */
 .advantages-title {
   color: var(--color-brand-dark);
   font-family: 'Play';
+  text-align: center;
   font-size: 64px;
   font-weight: 700;
+  line-height: 1.16;
   margin-bottom: 48px;
 }
-.advantages-list {
-  font-size: 18px;
-}
+
 .advantages-title .accent {
   color: var(--color-brand-light);
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-card {
+  background-color: var(
+    --color-secondary-dark-gray
+  ); /*поки інший колір, щоб було видно картку*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+  max-width: 360px;
+  flex: 1;
+  padding: 24px 32px;
+  border-radius: 32px;
+}
+
+.advantages-card p {
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--color-brand-dark);
+  text-align: center;
+}
+
+/* Тимчасовий стиль для іконки, поки немає SVG-спрайту */
+.advantages-icon {
+  background-color: var(--color-brand-light);
 }
 
 /* Procedures-section */
@@ -187,6 +301,39 @@ header {
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 48px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.procedures-title .accent {
+  color: var(--color-brand-light);
+}
+
+.procedure-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+}
+
+.procedure-card {
+  width: 344px;
+  height: 456px;
+  border-radius: 4px 120px 4px 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+.procedure-name {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-primary-light);
+  text-align: center;
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
 }
 
 /* Contacts-section */
@@ -195,17 +342,63 @@ header {
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 48px;
+  text-align: center;
 }
 .contacts-title .accent {
   color: var(--color-brand-light);
 }
 
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.contact-map iframe {
+  border-radius: 32px;
+}
+
 /* Footer */
 footer {
   background-color: var(--color-brand-dark);
+  padding: 56px;
+}
+.footer-menu,
+.footer-contacts,
+.footer-socials {
+  padding: 0;
+  margin: 0;
 }
 
-.address-copyright {
+.footer-container {
+  display: flex;
+  gap: 186px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+footer .address-copyright {
   font-size: 13px;
   color: var(--color-secondary-light-gray);
 }
